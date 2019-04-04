@@ -15,8 +15,8 @@ class App extends Component {
         this.setState({amount: 1});
     };
 
-    clickFunction = (num)=>{
-        console.log(num);
+    clickFunction = (name)=>{
+        console.log(name);
     };
 
 
@@ -29,10 +29,9 @@ class App extends Component {
           {/*calling child component twice in parent*/}
           <Players name={1} amount={this.state.amount}/>
 
-          <h1>The winner is: {this.props.name}</h1>
+          <h1>The winner is: <Players name={this.state.name}/></h1>
 
           <Players name={2} amount={this.state.amount}/>
-          {/*<Players clickFunction = {this.clickFunction}/>*/}
 
 
       </div>
